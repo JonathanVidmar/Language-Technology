@@ -1,0 +1,71 @@
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Tokenizer {
+
+    public static void main(String[] args) throws IOException {
+    	//Tokenizer tokenizer = new Tokenizer();
+    	//tokenizer.normalizeSelma(args);
+    }
+
+    void normalizeSelma(String[] args) throws IOException {
+        FileReader reader = new FileReader();
+        String fileText = reader.readFile(args[0]);
+        Tokenizer tokenizer = new Tokenizer();
+        String text = tokenizer.replaceNewLine(fileText);
+        ArrayList<String> sentences = tokenizer.tokenizeSentence(text);
+        tokenizer.writeLinesToFile("Selma_normalized.txt", sentences); 
+    }
+    
+    String replaceNewLine(String text) {
+        return text.replaceAll("\\s+", " ");
+    }
+    
+    String[] tokenize(String text) {
+        String[] words = text.split("\\P{L}+");
+        return words;
+    }
+    
+    ArrayList<String> tokenizeSentence(String text) {
+    	ArrayList<String> sentences = new ArrayList<String>();
+    	Pattern pattern = Pattern.compile("([\\\\sA-ZÅÄÖ]+[^.!?]*[.!?])");
+    	Matcher matcher = pattern.matcher(text);
+        
+    	while (matcher.find()) {
+    		String sentence = matcher.group().toLowerCase();
+    		String modifiedSentence = "<s> " + sentence.replaceAll("[\\.,!?;:\"]", " ") + "</s> ";
+    		sentences.add(modifiedSentence);
+        }
+    	return sentences;
+    }
+    
+    void writeLinesToFile(String fileName, ArrayList<String> text) throws IOException {
+    	
+		Writer writer = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(fileName), "utf-8"));
+		for (int i = 0; i < text.size(); i++) {
+			writer.write(text.get(i));
+		}
+		writer.write('\n');
+		writer.close();
+    	System.out.println("Done printing file!");
+    }
+}
+
+
+
+
+
+
+
+
+

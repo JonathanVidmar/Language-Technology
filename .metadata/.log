@@ -8,3 +8,150 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2015-09-08 13:36:26.563
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:18:43.177
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:26:09.912
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:28:26.816
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:28:45.478
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:28:56.021
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:32:07.311
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:34:59.084
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:47:43.070
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:52:31.274
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:52:46.070
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:52:51.076
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:54:12.543
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 14:54:35.005
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:01:35.960
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:01:37.986
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:02:49.092
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:06:21.625
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:06:23.902
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:06:35.624
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:06:38.083
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:07:12.325
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:07:19.390
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:07:22.285
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2015-09-08 15:07:49.150
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2015-09-08 16:07:23.071
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Some characters cannot be mapped using "US-ASCII" character encoding.
+Either change the encoding or remove the characters which are not supported by the "US-ASCII" character encoding.
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:378)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:327)
+	at org.eclipse.ltk.core.refactoring.resource.ResourceChange$ValidationState.saveIfDirty(ResourceChange.java:256)
+	at org.eclipse.ltk.core.refactoring.resource.ResourceChange.isValid(ResourceChange.java:147)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.isValid(DynamicValidationStateChange.java:100)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.isValid(DynamicValidationStateChange.java:100)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.nio.charset.CoderResult.throwException(CoderResult.java:278)
+	at java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:798)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:366)
+	... 16 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 3 2015-09-08 16:07:23.072
+!MESSAGE Some characters cannot be mapped using "US-ASCII" character encoding.
+Either change the encoding or remove the characters which are not supported by the "US-ASCII" character encoding.
+!STACK 0
+java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.nio.charset.CoderResult.throwException(CoderResult.java:278)
+	at java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:798)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:366)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:327)
+	at org.eclipse.ltk.core.refactoring.resource.ResourceChange$ValidationState.saveIfDirty(ResourceChange.java:256)
+	at org.eclipse.ltk.core.refactoring.resource.ResourceChange.isValid(ResourceChange.java:147)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.isValid(DynamicValidationStateChange.java:100)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.isValid(DynamicValidationStateChange.java:100)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.isValid(CompositeChange.java:239)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2015-09-08 16:19:59.311 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Handmark/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Handmark/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-09-08 16:20:04.684
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-08 16:20:07.173
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2015-09-08 16:50:02.346 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Handmark/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Handmark/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-08 16:50:09.351
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
