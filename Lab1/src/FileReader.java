@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class FileReader {
     String readFile(String file) throws IOException {
-    	
+    	String text = new Scanner(new File(file)).useDelimiter("\\Z").next();
         return text;
     }    
 }

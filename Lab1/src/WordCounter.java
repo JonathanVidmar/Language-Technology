@@ -9,25 +9,36 @@ import java.util.TreeMap;
 public class WordCounter {
     public static void main(String[] args) throws IOException {
         FileReader reader = new FileReader();
-        
         String text = reader.readFile(args[0]);
         Tokenizer tokenizer = new Tokenizer();
         String[] words = tokenizer.tokenize(text);
+        
         WordCounter wordCounter = new WordCounter();
+        
         Map<String, Integer> wordCounts = wordCounter.count(words);
         for (String wordCount : wordCounts.keySet()) {
             System.out.println(wordCounts.get(wordCount) + "\t" + wordCount);
         }
+        
         Map<String, Integer> bigramCounts = wordCounter.countBigrams(words);
         for (String bigramCount : bigramCounts.keySet()) {
             System.out.println(bigramCounts.get(bigramCount) + "\t" + bigramCount);
         }
+        
         Map<String, Integer> nCounts = wordCounter.countNgrams(words, 7);
         for (String nCount : nCounts.keySet()) {
             System.out.println(nCounts.get(nCount) + "\t" + nCount);
         }
     }
 
+    int totalWords(Map<String, Integer> words) {
+		int count = 0;
+    	for (String word: words.keySet()) {
+			count += words.get(word);
+		}
+    	return count;
+    }
+    
     Map<String, Integer> count(String[] words) {
         Map<String, Integer> counts = new TreeMap<>();
         for (String word : words) {
@@ -39,7 +50,7 @@ public class WordCounter {
         }
         return counts;
     }
-
+    
     Map<String, Integer> countBigrams(String[] words) {
         Map<String, Integer> counts = new TreeMap<>();
         for (int i = 0; i < words.length - 1; i++) {
@@ -52,7 +63,7 @@ public class WordCounter {
         }
         return counts;
     }
-
+    
     Map<String, Integer> countNgrams(String[] words, int n) {
         Map<String, Integer> counts = new TreeMap<>();
         for (int i = 0; i < words.length - n + 1; i++) {
@@ -67,13 +78,16 @@ public class WordCounter {
     }
     
     String tabJoin(String[] words,int i, int n) {
-    	String nGram = words[i];
-    	for (int k = 0; k < n; k++) {
+    	StringBuilder sb = new StringBuilder(words[i]);
+    	for (int k = 0; k < n-1; k++) {
     		i++;
-    		nGram += "\t" + words[i];    		
+    		sb.append("\t");
+    		sb.append(words[i]);
     	}
-    	return nGram;
+    	return sb.toString();
     }
+    
+    
 }
 
 

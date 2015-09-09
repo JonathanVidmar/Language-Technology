@@ -11,17 +11,39 @@ public class Pipeline {
         Tokenizer tokenizer = new Tokenizer();
         String[] words = tokenizer.tokenize(text);
         WordCounter wordCounter = new WordCounter();
-        Map<String, Integer> wordCounts = wordCounter.count(words);
-        for (String wordCount : wordCounts.keySet()) {
-            System.out.println(wordCounts.get(wordCount) + "\t" + wordCount);
-        }
+        
         Pipeline pipeline = new Pipeline();
-        Map<String, Integer> sortedCounts = pipeline.sortByValue(wordCounts);
-        for (String word : sortedCounts.keySet()) {
-            System.out.println(word + ": " + wordCounts.get(word));
-        }
+        //Unigrams
+        Map<String, Integer> unigrams = wordCounter.count(words);
+        Map<String, Integer> sortedUnigrams = pipeline.sortByValue(unigrams);
+        String uc = pipeline.printSortedMap(sortedUnigrams, unigrams);
+        
+//        //Bigrams
+//        Map<String, Integer> bigrams = wordCounter.countBigrams(words);
+//        Map<String, Integer> sortedBigrams = pipeline.sortByValue(bigrams);
+//        String bc = pipeline.printSortedMap(sortedBigrams, bigrams);
+//        
+//        
+////        //Ngrams
+//        Map<String, Integer> ngrams = wordCounter.countNgrams(words, 5);
+//        Map<String, Integer> sortedNgrams = pipeline.sortByValue(ngrams);
+//        String nc = pipeline.printSortedMap(sortedNgrams, ngrams);
+//        System.out.println("Unigram counts:  " + uc);
+//        System.out.println("Bigram counts:  " + bc);
+//        System.out.println("Ngram counts:  " + nc);
     }
 
+    public static String printSortedMap(Map<String, Integer> map, Map<String, Integer> words) {
+		int count = 0;
+		int unique = 0;
+    	for (String word: map.keySet()) {
+			System.out.println(word + ": " + words.get(word));
+			count += words.get(word);
+			unique++;
+		}
+    	return count + "  Unique:  " +  unique;
+    }
+    
     // Method borrowed from stack overflow
     public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
         List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
